@@ -2,4 +2,5 @@ ipykernel
 requests
 beautifulsoup4
 lxml
+urllib3
 
