@@ -6,6 +6,7 @@
 * mecab-ipadic
 * xz
 * cabocha
+* wget
 
 xz is needed for mecab-ipadic-meologd installation
 
@@ -54,3 +55,8 @@ Note
 4. install cabocha-python under venv of this project
 
 
+### Get all Wikipedia data
+
+```bash
+$ wget https://dumps.wikimedia.org/jawiki/latest/jawiki-latest-pages-articles.xml.bz2
+```
