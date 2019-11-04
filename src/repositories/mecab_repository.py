@@ -2,6 +2,7 @@ class MecabRepository(object):
 
     def __init__(self):
         import MeCab
+        # self.tagger = MeCab.Tagger("-Ochasen")
         self.tagger = MeCab.Tagger("-d /usr/local/lib/mecab/dic/mecab-ipadic-neologd")
 
     def paragraph_to_list(self, paragraph):
