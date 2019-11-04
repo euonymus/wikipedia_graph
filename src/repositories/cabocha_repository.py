@@ -7,9 +7,6 @@ class CabochaRepository(object):
         
     def parse(self, sentence):
         import CaboCha
-        print(sentence)
         tree = self.cabocha.parse(sentence)
-        print(tree.toString(CaboCha.CABOCHA_FORMAT_TREE))
-
-
+        return tree.toString(CaboCha.CABOCHA_FORMAT_TREE)
 
