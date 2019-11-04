@@ -1,8 +1,9 @@
+python-dotenv
 ipykernel
+pytest
 requests
 beautifulsoup4
 lxml
 urllib3
 mecab-python3
 neo4j
-
