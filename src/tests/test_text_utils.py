@@ -11,6 +11,11 @@ class TestTextUtils(object):
         result = text_utils.delete_brackets(text)
         assert result == expected
 
-
-
+    @pytest.mark.parametrize("text, expected", [
+        ("今日は良い天気。でも明日も良い天気かな？あさってはどうかな?うーん。", ['今日は良い天気。','でも明日も良い天気かな？','あさってはどうかな?','うーん。']),
+    ])
+    def test_split2sentences(self, text, expected):
+        text_utils = TextUtils()
+        result = text_utils.split2sentences(text)
+        assert result == expected
 

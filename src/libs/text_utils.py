@@ -29,3 +29,7 @@ class TextUtils(object):
         """ recursive processing """
         return self.delete_brackets(s) if sum([1 if re.search(l_, s) else 0 for l_ in l]) > 0 else s
 
+    def split2sentences(self, text):
+        # Split into Sentences
+        import re
+        return re.findall(r'[^。?？!！]+(?:[。?？!！]|$)', text)
