@@ -27,14 +27,3 @@ class TestMecabRepository(object):
         result = mecab.morphemize(text)
         assert result == expected
 
-    @pytest.mark.parametrize("text, expected", [
-        ("サン・マイクロシステムズは、アンディ・ベクトルシャイムがアメリカ合衆国カリフォルニアに本社を置いていたコンピュータの製造・ソフトウェア開発・ITサービス企業である。鈴木さんは苗字です。", [{'name': 'サン・マイクロシステムズ', 'label': 'Organization'}, {'name': 'アンディ・ベクトルシャイム', 'label': 'Person'}, {'name': 'アメリカ合衆国', 'label': 'Country'}, {'name': 'カリフォルニア', 'label': 'Area'}, {'name': 'ソフトウェア開発', 'label': 'Thing'}, {'name': 'IT', 'label': 'Thing'}]),
-    ])
-    def test_retrieve_proper_nouns(self, text, expected):
-        mecab = MecabRepository()
-        result = mecab.retrieve_proper_nouns(text)
-        assert result == expected
-
-
-
-
